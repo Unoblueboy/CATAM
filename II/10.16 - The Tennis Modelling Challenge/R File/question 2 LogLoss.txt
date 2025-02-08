@@ -1,0 +1,2 @@
+Training Data Logistic Loss 0.599063453561973
+Test Data Logistic Loss 0.550330941693987

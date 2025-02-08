@@ -1,0 +1,29 @@
+The posterior mean of Arsnal mean : 80.5388899134502
+The posterior mean of Asten Villa mean : 51.8994369066947
+The posterior mean of Blackborn Rovers mean : 50.4212988615273
+The posterior mean of Boltin Wandrers mean : 51.6045368589237
+The posterior mean of Charlston Athletic mean : 47.6933970650255
+The posterior mean of Chelsea Buns mean : 68.0949126223017
+The posterior mean of Evraton mean : 50.7358689936067
+The posterior mean of Fullem mean : 48.5484113709561
+The posterior mean of Livurpule mean : 61.2885855165455
+The posterior mean of Manchester Ununited mean : 74.5365946496394
+The posterior mean of Middlesbro mean : 49.8048703800766
+The posterior mean of Newcassel Divided mean : 59.2698614733449
+The posterior mean of Slothampton mean : 47.7995497755777
+The posterior mean of Tottenham Coldspur mean : 51.4745690071147
+The posterior mean of Arsnal variances : 96.6486036526048
+The posterior mean of Asten Villa variances : 68.5221501354221
+The posterior mean of Blackborn Rovers variances : 115.207399929893
+The posterior mean of Boltin Wandrers variances : 130.955031219654
+The posterior mean of Charlston Athletic variances : 24.9227221187762
+The posterior mean of Chelsea Buns variances : 367.990299948751
+The posterior mean of Evraton variances : 164.640972888534
+The posterior mean of Fullem variances : 34.6062399159848
+The posterior mean of Livurpule variances : 178.788672992579
+The posterior mean of Manchester Ununited variances : 56.4543491652934
+The posterior mean of Middlesbro variances : 25.3131582278894
+The posterior mean of Newcassel Divided variances : 211.301550118149
+The posterior mean of Slothampton variances : 142.998177502306
+The posterior mean of Tottenham Coldspur variances : 47.4141341208647
+The posterior mean of theta : 54.6717646511728

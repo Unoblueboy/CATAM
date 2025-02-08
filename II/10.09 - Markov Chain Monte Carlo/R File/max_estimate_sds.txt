@@ -1,0 +1,4 @@
+Maximum standard deviation for posterior mean of mu_k is 0.717597063469652
+Maximum standard deviation for posterior mean of sigma_k^2 is 55.6439688303647
+Maximum standard deviation for posterior mean of theta is 0.315121957142704
+Maximum standard deviation for posterior probability mu_k > theta is 0.0331471652034635

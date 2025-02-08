@@ -1,0 +1,1 @@
+Lambda which minimises the mean cross-validated error is: 0.000209427079577062

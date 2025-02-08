@@ -1,0 +1,230 @@
+Almagro N.: -1.234681551175
+Almagro N. Carpet: 0
+Almagro N. Clay: 0.276672771773717
+Almagro N. Grass: 0
+Anderson K.: -1.35118003754035
+Anderson K. Clay: -0.0569577096524396
+Anderson K. Grass: 0
+Baghdatis M.: -0.795839243853994
+Baghdatis M. Carpet: 0.580788690955746
+Baghdatis M. Clay: -0.849136265616186
+Baghdatis M. Grass: 0.173686389095082
+Benneteau J.: -1.31681811831289
+Benneteau J. Carpet: 0
+Benneteau J. Clay: 0
+Benneteau J. Grass: 0
+Berdych T.: -0.470729146344779
+Berdych T. Carpet: 0.341468159352423
+Berdych T. Clay: 0
+Berdych T. Grass: 0
+Blake J.: -0.880232490430669
+Blake J. Carpet: 0
+Blake J. Clay: -0.13965047586489
+Blake J. Grass: -0.916892488786821
+Canas G.: -0.411793088318112
+Canas G. Carpet: 0
+Canas G. Clay: 0
+Canas G. Grass: 0
+Chardy J.: -1.64200919174551
+Chardy J. Carpet: 0
+Chardy J. Clay: 0
+Chardy J. Grass: -0.371837908306008
+Chela J.I.: -1.21531821860481
+Chela J.I. Carpet: -0.107792568669288
+Chela J.I. Clay: 0
+Chela J.I. Grass: 0
+Cilic M.: -0.824398705179295
+Cilic M. Carpet: 0
+Cilic M. Clay: -1.02912836464224
+Cilic M. Grass: 0
+Clement A.: -1.43549136310403
+Clement A. Carpet: 0
+Clement A. Clay: 0
+Clement A. Grass: 0
+Coria G.: -0.755794016506391
+Coria G. Carpet: 0
+Coria G. Clay: 1.3843018133815
+Coria G. Grass: 0
+Davydenko N.: -0.426734409668856
+Davydenko N. Carpet: 0.110449093650088
+Davydenko N. Clay: -0.130437056124346
+Davydenko N. Grass: 0
+Del Potro J.M.: -0.0564982612040388
+Del Potro J.M. Carpet: 0
+Del Potro J.M. Clay: 0
+Del Potro J.M. Grass: 0
+Djokovic N.: 1.00538114806127
+Djokovic N. Carpet: -2.06524617711647
+Djokovic N. Clay: 0
+Djokovic N. Grass: 0
+Federer R.: 0.878867145859966
+Federer R. Carpet: -0.941520429689676
+Federer R. Clay: 0.238729076437215
+Federer R. Grass: 0.899347141737547
+Ferrer D.: -0.415187576034492
+Ferrer D. Carpet: 0
+Ferrer D. Clay: 0.47434207217355
+Ferrer D. Grass: -0.11505607292365
+Ferrero J.C.: -0.739093974906478
+Ferrero J.C. Carpet: 0
+Ferrero J.C. Clay: 0.840251158990963
+Ferrero J.C. Grass: 0
+Fish M.: -0.712829519292545
+Fish M. Carpet: 0
+Fish M. Clay: -1.30857820596281
+Fish M. Grass: 0
+Fognini F.: -1.72881371322061
+Fognini F. Clay: 0.357396708405956
+Fognini F. Grass: 0
+Gasquet R.: -0.670560538985379
+Gasquet R. Carpet: 0.111365952374415
+Gasquet R. Clay: 0
+Gasquet R. Grass: 0.481802303259191
+Gaudio G.: -1.07417760748647
+Gaudio G. Carpet: 0
+Gaudio G. Clay: 0.729223694357028
+Gaudio G. Grass: 0
+Gonzalez F.: -0.614607063162656
+Gonzalez F. Carpet: -1.50190006175514
+Gonzalez F. Clay: 0.239202568879226
+Gonzalez F. Grass: -0.295746898798162
+Grosjean S.: -1.14857978428717
+Grosjean S. Carpet: 0
+Grosjean S. Clay: 0
+Grosjean S. Grass: 0.369788391066479
+Haas T.: -0.64746693870594
+Haas T. Carpet: 0
+Haas T. Clay: -0.347501188474911
+Haas T. Grass: 0
+Henman T.: -0.768181842834629
+Henman T. Carpet: 1.02692779490565
+Henman T. Clay: 0
+Henman T. Grass: 0.515243024388166
+Hewitt L.: -0.108426330803942
+Hewitt L. Carpet: 0
+Hewitt L. Clay: 0
+Hewitt L. Grass: 0
+Isner J.: -0.889074388464509
+Isner J. Clay: -0.982678995122046
+Isner J. Grass: 0
+Karlovic I.: -1.06959464015449
+Karlovic I. Carpet: 0
+Karlovic I. Clay: -0.381311590930214
+Karlovic I. Grass: 0.692202300732646
+Kiefer N.: -0.824267119119353
+Kiefer N. Carpet: 0
+Kiefer N. Clay: -0.23385670218373
+Kiefer N. Grass: 0
+Kohlschreiber P.: -1.34321346748185
+Kohlschreiber P. Carpet: 0
+Kohlschreiber P. Clay: 0
+Kohlschreiber P. Grass: 0
+Kuerten G.: -0.412570815046872
+Kuerten G. Carpet: 0
+Kuerten G. Clay: 0.481310435223682
+Ljubicic I.: -0.7427850433353
+Ljubicic I. Carpet: 0
+Ljubicic I. Clay: 0.1950151473716
+Ljubicic I. Grass: -0.148442254992521
+Lopez F.: -1.13813954837927
+Lopez F. Carpet: 0
+Lopez F. Clay: -0.278051300029379
+Lopez F. Grass: 0.358484958900001
+Mathieu P.H.: -1.22430223683945
+Mathieu P.H. Carpet: 0
+Mathieu P.H. Clay: -0.235792338468826
+Mathieu P.H. Grass: 0
+Melzer J.: -1.17999018841087
+Melzer J. Carpet: 0
+Melzer J. Clay: 0
+Melzer J. Grass: 0.136659014370137
+Monaco J.: -1.24055562652475
+Monaco J. Carpet: 0
+Monaco J. Clay: 0.337082550416446
+Monaco J. Grass: 0
+Monfils G.: -0.789108073457385
+Monfils G. Carpet: 0
+Monfils G. Clay: 0.289384731781324
+Monfils G. Grass: 0
+Moya C.: -0.868012255802792
+Moya C. Carpet: 0
+Moya C. Clay: 0.452973747346851
+Moya C. Grass: 0
+Murray A.: 0.385083605129751
+Murray A. Carpet: 0
+Murray A. Clay: -0.590022793142046
+Murray A. Grass: 0.474745647086021
+Nadal R.: 0.655622717493339
+Nadal R. Carpet: 0
+Nadal R. Clay: 1.61298713508639
+Nadal R. Grass: 1.13587241578929
+Nalbandian D.: -0.382553542170362
+Nalbandian D. Carpet: 1.29810499889987
+Nalbandian D. Clay: 0
+Nalbandian D. Grass: 0
+Nieminen J.: -1.69507591319015
+Nieminen J. Carpet: 0
+Nieminen J. Clay: 0.35503911334757
+Nieminen J. Grass: 0
+Nishikori K.: -0.518947279394493
+Nishikori K. Clay: 0
+Nishikori K. Grass: -1.01427690059201
+Novak J.: -1.15019017486034
+Novak J. Carpet: 0
+Novak J. Clay: 0
+Novak J. Grass: 0
+Raonic M.: -0.699519844874133
+Raonic M. Clay: -0.193902508575933
+Raonic M. Grass: 0
+Robredo T.: -0.979551620700338
+Robredo T. Carpet: 0.107311313879213
+Robredo T. Clay: 0.209926440289285
+Robredo T. Grass: -0.291628913366539
+Roddick A.: -0.0635296619447939
+Roddick A. Carpet: 0
+Roddick A. Clay: -0.315708902065761
+Roddick A. Grass: 0
+Safin M.: -0.717040780929182
+Safin M. Carpet: 1.41376311254603
+Safin M. Clay: -0.105843914921898
+Safin M. Grass: 0.155522991906964
+Schuettler R.: -1.40716524591561
+Schuettler R. Carpet: 0
+Schuettler R. Clay: 0
+Schuettler R. Grass: 0.507291146881787
+Seppi A.: -1.71974340177089
+Seppi A. Carpet: 0
+Seppi A. Clay: 0.473352685899843
+Seppi A. Grass: 0
+Simon G.: -0.804247233148846
+Simon G. Carpet: 0
+Simon G. Clay: 0
+Simon G. Grass: -0.372589016806958
+Soderling R.: -0.307596638746575
+Soderling R. Carpet: 0
+Soderling R. Clay: 0
+Soderling R. Grass: 0
+Stepanek R.: -1.07152917772123
+Stepanek R. Carpet: 0.349888845282768
+Stepanek R. Clay: 0.182009490089498
+Stepanek R. Grass: 0
+Tipsarevic J.: -1.20502520002535
+Tipsarevic J. Carpet: 0
+Tipsarevic J. Clay: 0
+Tipsarevic J. Grass: 0
+Tsonga J.W.: -0.0635954823958109
+Tsonga J.W. Carpet: 0
+Tsonga J.W. Clay: -0.240115893939751
+Tsonga J.W. Grass: 0.0588387133743099
+Verdasco F.: -1.03173654686279
+Verdasco F. Carpet: 0
+Verdasco F. Clay: 0.485033240656906
+Verdasco F. Grass: 0
+Wawrinka S.: -0.41500147616422
+Wawrinka S. Carpet: 0
+Wawrinka S. Clay: 0.196932784354177
+Wawrinka S. Grass: 0
+Youzhny M.: -0.809606485623527
+Youzhny M. Carpet: 0
+Youzhny M. Clay: -0.511397653046353
+Youzhny M. Grass: 0

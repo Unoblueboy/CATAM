@@ -1,0 +1,2 @@
+Test Statistic: 221.628722045949871
+P-value for the likelihood ratio test: 0.005518082704732

@@ -1,0 +1,436 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+\geometry{margin=2cm} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+% These packages are all incorporated in the memoir class to one degree or another...
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{color}
+\usepackage{listings}
+\usepackage{matlab-prettifier}
+\lstset{
+	style=Matlab-editor,
+	basicstyle=\mlttfamily
+}
+
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{epstopdf}
+
+\usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+\let\originalleft\left
+\let\originalright\right
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
+\renewcommand{\right}{\aftergroup\egroup\originalright}
+
+\begin{document}
+\section*{3.6}
+\vspace*{4cm}
+
+\section*{3.6 Particle Drift in a Periodic Flow Field}
+
+\subsubsection*{Question 1}
+We have
+\begin{equation}
+	\frac{dX}{dt} = \alpha \cos k \left( X\left( t \right) - ct \right)
+\end{equation}
+Consider the change of variable $X = \beta X'$, $t = \gamma t'$ with $X'$, $T'$ dimensionless (i.e. $\beta$ and $\gamma$ represent our new units of distance and time respectively), so Equation 1 transforms to 
+\begin{equation}
+	\frac{dX'}{dt'} = \frac{\alpha \gamma}{\beta} \cos k \left( \beta X'\left( t' \right) - \gamma ct' \right)
+\end{equation}
+Now let $\beta = \frac{2 \pi}{k}$, $\gamma = \frac{2 \pi}{ck}$, then Equation 2 becomes
+\begin{equation}
+	\frac{dX'}{dt'} = a \cos 2\pi \left( X'\left( t' \right) - t' \right)
+\end{equation}
+where $a = \frac{\alpha}{c}$, thus by choosing appropriate units for distance and time we can let $k=2\pi$, $c=1$ in Equation 1.
+\subsubsection*{Question 2}
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+	\centering
+		\includegraphics[width=\textwidth]{"../Matlab Files/x0=0 apos"}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+	\centering
+		\includegraphics[width=\textwidth]{"../Matlab Files/x0=0 aneg"}
+	\end{subfigure}
+	\caption{Graphs showing solutions to the ODE for different values of $a$ with a relative tolerance of $10^{-7}$ and an absolute tolerance $10^{-8}$}
+	\label{fig:mult_a}
+\end{figure}
+From Figure \ref{fig:mult_a}, we see that For $|a|<1$ the particle drifts away from the origin and performs an oscillatory motion along the drifting path. For $|a| \geq 1$ we see that the particle tends towards a line of constant gradient (i.e the particle travels at a constant velocity) For Figure \ref{fig:mult_a} a relative tolerance of $10^{-7}$ and absolute tolerance $10^{-8}$ was used, we can compare this result to that with relative tolerance of $10^{-14}$ and absolute tolerance $10^{-16}$ shown in Figure \ref{fig:mult_a_high} and find they are very similar thus I am confident the results I obtained before are accurate.
+
+\begin{figure}[h]
+	\centering
+	\begin{subfigure}{0.5\textwidth}
+	\centering
+		\includegraphics[width=\textwidth]{"../Matlab Files/x0=0 apos high"}
+	\end{subfigure}%
+	\begin{subfigure}{0.5\textwidth}
+	\centering
+		\includegraphics[width=\textwidth]{"../Matlab Files/x0=0 aneg high"}
+	\end{subfigure}
+	\caption{Graphs showing solutions to the ODE for different values of $a$ with a relative tolerance of $10^{-14}$ and an absolute tolerance $10^{-16}$}
+	\label{fig:mult_a_high}
+\end{figure}
+In Figure \ref{fig:mult_x} we see that for a given $a$, the solutions to Equation (1) with $X(0) \neq 0$ all have similar behaviour.
+\begin{figure}[H]
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=1.0\textwidth]{"../Matlab Files/a=05"}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=1.0\textwidth]{"../Matlab Files/a=09"}
+	\end{subfigure}
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=0.5\textwidth]{"../Matlab Files/a=1"}
+	\end{subfigure}
+	\caption{Graphs showing solutions to the ODE for different values of $X\left(0\right)$, for 3 values of $a$}
+	\label{fig:mult_x}
+\end{figure}
+
+
+\subsubsection*{Question 3}
+
+First note that if $X\left( t \right)$ is a solution to the ODE then so is $X'\left( t \right) = X\left( t \right) + n$ where $n \in \mathbb{Z}$ as
+\begin{align*}
+	\frac{dX'}{dt} = {} &  \frac{d}{dt}\left(X\left(t\right) + n\right) = \frac{dX}{dt} \\
+			  = {} & a \cos 2\pi \left( X\left( t \right) - t \right) \\
+			  = {} & a \cos \left[ 2\pi \left( X\left( t \right) - t \right) + 2\pi n\right] \\
+			  = {} & a \cos 2\pi \left( X\left( t \right) + n - t \right) \\
+			  = {} & a \cos 2\pi \left( X'\left( t \right) - t \right)
+\end{align*}
+This means that in general we only have to consider solutions with $X\left(0\right)=x_0$ where $x_0 \in \left[0,1\right)$. We can make this claim stronger and say that time averaged drift velocity is determined by the drift velocity when $X\left(0\right)=0$. This is because the average drift velocity of $X+1$ is equal to drift velocity of $X$, so given a second solution $X'$ such that $X'\left(0\right)=x_0$ where $x_0 \in \left(0, 1\right)$ we must have $X\left(t\right) \leq X'\left(t\right) \leq X\left(t\right)+1$ (as the trajectory of particles cannot intercept) and as mean drift velocity is given is $lim_{t \to \infty}{\frac{X(t)-X(0)}{t}}=lim_{t \to \infty}{\frac{X(t)}{t}}$ the above inequality shows the average drift velocity of $X'$ is the same as the average drift velocity of X.
+
+Now consider solely the solution $X$ such that $X\left(0\right)=0$ and assume $X$ has some drift velocity $m$, then we can write $X(t) = mt + f(t)$ where $m$ is the average time drift velocity of the particle and $f(t)$ is some oscillatory function, if we assume $a$ small then the magnitude of $f$ is small (by looking at the ODE) so for large $t$ we can ignore this so $X(t) \approx mt$ therefore $\log{X(t)} \approx log(m) + log(t)$ so if we plot $log(X)$ against $log(t)$ and find the y intercept we can find the mean drift velocity. We are also be able to check that the average time drift velocity exists by checking if the graph of $log(X)$ against $log(t)$ has a gradient which tends to 1.
+
+
+We see in Figure \ref{fig:log_log} that for multiple small values of $a$ the graph of $log(X)$ against $log(t)$ has a gradient which tends to 1, suggesting the time average drift velocity does exist for these solutions.
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.7]{"../Matlab Files/log graphs"}
+	\caption{Graphs showing $log(X)$ against $log(t)$}
+	\label{fig:log_log}
+\end{figure}
+We can then continue to calculate an estimate for the time average drift velocity and compare to $\frac{1}{2}a^2$ we find by looking at the table below that the approximation is very close to $\frac{1}{2}a^2$
+
+\begin{verbatim}
+   a         y_int     calc_drift_vel    half_a_squared    abs_error     rel_error
+________    _______    ______________    ______________    __________    _________
+
+    0.01    -9.9466       4.789e-05             5e-05      2.1102e-06     0.042204
+0.013493    -9.3208      8.9544e-05        9.1028e-05      1.4841e-06     0.016303
+0.018206    -8.6996      0.00016666        0.00016572      9.3703e-07    0.0056542
+0.024565    -8.0804      0.00030955        0.00030171      7.8453e-06     0.026003
+0.033145    -7.5013      0.00055234        0.00054928      3.0643e-06    0.0055788
+0.044721    -6.9131      0.00099463             0.001       5.375e-06     0.005375
+0.060342    -6.3173       0.0018048         0.0018206      1.5738e-05    0.0086448
+0.081418    -5.7046       0.0033307         0.0033145      1.6242e-05    0.0049002
+ 0.10986    -5.1023       0.0060826         0.0060342       4.847e-05    0.0080325
+ 0.14823     -4.508         0.01102          0.010986      3.4856e-05    0.0031729
+     0.2    -3.9134        0.019972              0.02      2.8367e-05    0.0014183
+\end{verbatim}
+
+\subsubsection*{Question 4}
+
+If we were to try and plot $\frac{dX}{dt}$ against $X$ we would face a problem with the $t$ dependence in $\frac{dX}{dt}$ so consider the substitution $\chi\left( t \right) = X \left( t \right) - t$, then if $X$ satisfies Equation (1), $\chi$ satisfies
+\begin{equation}
+	\frac{d\chi}{dt} = a \cos 2\pi\chi - 1
+\end{equation}
+
+Now plot $\frac{d\chi}{dt}$ against $\chi$ for various values of $a$
+\begin{figure}[H]
+	\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{"../Matlab Files/large a"}
+		\caption{Graph of $\frac{d\chi}{dt}$ against $\chi$ for $\left|a\right|>1$}
+	\end{subfigure}%
+	\begin{subfigure}{.5\textwidth}
+		\centering
+		\includegraphics[width=0.9\textwidth]{"../Matlab Files/mid a"}
+		\caption{Graph of $\frac{d\chi}{dt}$ against $\chi$ for $\left|a\right|=1$}
+	\end{subfigure}
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=0.45\textwidth]{"../Matlab Files/small a"}
+		\caption{Graph of $\frac{d\chi}{dt}$ against $\chi$ for $\left|a\right|<1$}
+	\end{subfigure}
+	\caption{Graphs of $\frac{d\chi}{dt}$ against $\chi$ for various values of $a$}
+	\label{fig:grad_vs_X}
+\end{figure}
+
+In Figure \ref{fig:grad_vs_X}, we can see that for $|a| \geq 1$, $\chi\left(t\right)$ tends to a steady state (i.e. a point where $\frac{d\chi}{dt}=0$) which implies that a particle following the path $X(t)$ eventually ends up travelling at an (almost) constant velocity of 1, we also see that in both of these cases, although the flow is periodic and oscillatory, the solutions are not. For $|a|<1$ we see that $\chi$ is monotonically decreasing however the value of $\frac{d\chi}{dt}$ spends more time being greater than $-1$ than less than so the average of $\frac{d\chi}{dt}$ is greater than $-1$, so the average drift velocity is greater than 0. Also we can note that $\chi$ has an oscillatory nature therefore so does $X$.
+
+
+\subsubsection*{Question 5}
+
+Consider the substitution $\chi\left( t \right) = X \left( t \right) - t$, then if $X$ satisfies Equation (3) then $\chi$ satisfies
+\begin{equation}
+	\frac{d\chi}{dt} = a \cos 2\pi\chi - 1
+\end{equation}
+This is a separable ODE equation thus can find $\chi$ by doing
+\begin{equation*}
+	\int{\frac{\frac{d\chi}{dt}}{a\cos 2\pi\chi -1}dt} = \int{1dt}
+\end{equation*}
+
+and has the solution
+
+\begin{equation*}
+	\chi \left(t\right)=
+	\begin{cases} 
+      		\frac{1}{\pi}\arctan\left(\frac{1}{2\pi\left(t-c\right)}\right)  & a = 1 \\
+      		-\frac{1}{\pi}\arctan\left(2\pi\left(t-c\right)\right) & a = -1 \\
+      		\frac{1}{\pi}\arctan\left(\frac{\sqrt{1-a^2}}{a+1}\tan\left(\pi\sqrt{1-a^2}\left(c-t\right)\right)\right) & |a| < 1 \\
+     		\frac{1}{\pi}\arctan\left(\sqrt{\frac{a-1}{a+1}}\tanh\left(\pi\sqrt{a^2-1}\left(t-c\right)\right)\right) & |a|>1
+   	\end{cases}
+\end{equation*}
+
+Note that in the case where $a=1$ there's a discontinuity in $\chi\left(t\right)$ when $t=c$ and when $|a|<1$ there's a discontinuity whenever $t=c-\frac{2n+1}{2\sqrt{1-a^2}}$  where $n \in \mathbb{Z}$. At these point $\chi\left(t^+\right)-\chi\left(t^-\right) \in \mathbb{Z}$ and note that if $\chi$ is a solution to Equation (5), then so is $\chi+n$ where $n \in \mathbb{Z}$ so using this in the cases $a=1$ and $|a|<1$ we can find continuous solutions to Equation (5), therefore we can find continuous solutions $X \left( t \right) = \chi \left( t \right) + t$ to Equation (3). Due to this continuation we should note that in the case where $|a|<1$ that $\chi\left(t+\frac{1}{\sqrt{1-a^2}}\right)-\chi\left(t\right) = -1$.
+
+Using $\chi\left(t\right)$ defined above we can easily deduce the solution $X\left(t\right)$ as
+\begin{equation*}
+	X\left(t\right) = t + \chi\left(t\right)
+\end{equation*}
+
+With regards to the time averaged drift velocity, using question 4 we can see this is 1 for $|a|>1$. For $|a| <1$ we will first calculate $\frac{d\chi}{dt}$
+\begin{align*}
+	\frac{d\chi}{dt} = {} & \frac{d}{dt}\left(\frac{1}{\pi}\arctan\left(\frac{\sqrt{1-a^2}}{a+1}\tan\left(\pi\sqrt{1-a^2}\left(c-t\right)\right)\right)\right) \\
+			     = {} & -\frac{1-a^2}{1+a\cos\left(\pi\sqrt{1-a^2}\left(c-t\right)\right)}
+\end{align*}
+So $\frac{d\chi}{dt}$ is periodic with period $T = \frac{1}{\sqrt{1-a^2}}$ so $\frac{dX}{dt} = \frac{d\chi}{dt} + 1$ is periodic with period $T$ so the average drift velocity $v$ is
+\begin{align*}
+	v = {} & \frac{1}{T}\int_{t}^{t+T}{\frac{dX}{dt} dt}\\
+	   = {} & \frac{1}{T}\int_{t}^{t+T}{\left(\frac{d\chi}{dt}+1\right) dt} \\
+	   = {} & \frac{1}{T}\left(T + \chi\left(t+\frac{1}{\sqrt{1-a^2}}\right)-\chi\left(t\right)\right) \\
+	   = {} & 1 - \frac{1}{T} \\
+	   = {} & 1 - \sqrt{1-a^2} \\
+	   = {} & 1 - \left(1-\frac{1}{2}a^2-\frac{1}{8}a^4 + \dots \right) \\
+	   \approx {} & \frac{1}{2}a^2
+\end{align*}
+This holds for $|a|$ sufficiently small.
+
+\newpage
+\section*{Program Listings}
+\subsection*{Function used to generate Figures \ref{fig:mult_a} and \ref{fig:mult_a_high}}
+\begin{lstlisting}
+function graph_a_values(tspan, reltol, abstol, a_values, x0,...
+    graph_title, filename)
+% graphs solution to the ODE
+
+    figure('visible','off')
+    opts = odeset('RelTol',reltol,'AbsTol',abstol);
+    miny = inf;
+    maxy = -inf;
+    for a = a_values
+        [t, x] = ode45(@(t,x) flowODE(t,x,a),...
+                       tspan,x0,opts);
+        plot(t,x, 'DisplayName',join(['a = ', num2str(a)]));
+        grid on;
+        miny = min([min(min(x)) miny]);
+        maxy = max([max(max(x)) maxy]);
+        yticks(floor(miny):1:ceil(maxy));
+        xticks(floor(tspan(1)):1:ceil(tspan(2)));
+        daspect([1 1 1]);
+        hold on;
+        legend('show');
+    end
+    xlabel(join([num2str(tspan(1)), "t", num2str(tspan(2))],...
+                " \leq "));
+    ylabel('X(t)');
+    legend('Location','northwest','AutoUpdate','off');
+    line([0 0], ylim, 'Color','black');
+    line(xlim, [0 0], 'Color','black');
+    hold off;
+    title(graph_title);
+    print(filename, '-dpng','-r600');
+end
+\end{lstlisting}
+\subsection*{Function used to generate Figure \ref{fig:mult_x}}
+\begin{lstlisting}
+function graph_x_values(tspan, reltol, abstol, a, x0_values,...
+    graph_title, filename)
+% graphs solution to the ODE
+
+    figure('visible','off')
+    opts = odeset('RelTol',reltol,'AbsTol',abstol);
+    miny = inf;
+    maxy = -inf;
+    for x0 = x0_values
+        [t, x] = ode45(@(t,x) flowODE(t,x,a),...
+                       tspan,x0,opts);
+        plot(t,x, 'DisplayName',join(['X(0) = ', num2str(x0)]));
+        grid on;
+        miny = min([min(min(x)) miny]);
+        maxy = max([max(max(x)) maxy]);
+        yticks(floor(miny):1:ceil(maxy));
+        xticks(floor(tspan(1)):1:ceil(tspan(2)));
+        daspect([1 1 1]);
+        hold on;
+        legend('show');
+    end
+    xlabel(join([num2str(tspan(1)), "t", num2str(tspan(2))],...
+                " \leq "));
+    ylabel('X(t)');
+    legend('Location','eastoutside','AutoUpdate','off');
+    line([0 0], ylim, 'Color','black');
+    line(xlim, [0 0], 'Color','black');
+    hold off;
+    title(graph_title);
+    print(filename, '-dpng','-r600');
+end
+\end{lstlisting}
+\subsection*{Functions used to generate figure \ref{fig:log_log}, and the Table in Question 3}
+\begin{lstlisting}
+function T = log_graph_a_values(tspan, reltol, abstol, a_values, x0,...
+    graph_title, filename)
+% graphs solution to the ODE
+
+    figure('visible','off')
+    opts = odeset('RelTol',reltol,'AbsTol',abstol);
+    miny = inf;
+    maxy = -inf;
+    yint = [];
+    for a = a_values
+        [t, x] = ode45(@(t,x) flowODE(t,x,a),...
+                       tspan,x0,opts);
+        x = arrayfun(@(y) log(y), x);
+        t = arrayfun(@(y) log(y), t);
+        ind = binary_search(t, 7);
+        t1 = t(ind);
+        x1 = x(ind);
+        t2 = t(end);
+        x2 = x(end);
+        c = (x1*t2-x2*t1)/(t2-t1);
+        yint = [yint; [a, c, exp(c), 0.5*a^2,...
+            abs(exp(c)-0.5*a^2), abs(exp(c)-0.5*a^2)/(0.5*a^2)]];
+        plot(t,x, 'DisplayName',join(['a = ', num2str(a)]));
+        miny = min([min(min(x)), miny]);
+        maxy = max([max(max(x)), maxy]);
+        daspect([1, 1, 1]);
+        hold on;
+        legend('show');
+    end
+    T = array2table(yint,'VariableNames',{'a','y_int','calc_drift_vel',...
+        'half_a_squared', 'abs_error', 'rel_error'});
+    disp(T)
+    xlabel(join(['0', "log(t)", num2str(log(tspan(2)))],...
+                " \leq "));
+    ylabel('log(X(t))');
+    axis([-2, log(tspan(2)), -6, 10])
+    legend('Location','northwest','AutoUpdate','off');
+    line([0 0], ylim, 'Color','black');
+    line(xlim, [0 0], 'Color','black');
+    yticks(-100:1:20);
+    xticks(-100:1:ceil(log(tspan(2))));
+    grid on;
+    hold off;
+    title(graph_title);
+    print(filename, '-dpng','-r600');
+end
+
+function result = binary_search(arr, T)
+    n = size(arr);
+    L = 1;
+    R = n(1);
+    result = floor((L+R)/2);
+    while L <= R
+        m = floor((L+R)/2);
+        if arr(m) >= T && arr(m-1) < T
+            result = m;
+            break
+        elseif arr(m) < T
+            L = m+1;
+        else
+            R = m-1;
+        end
+    end
+end
+\end{lstlisting}
+\subsection*{Code used to generate Figure \ref{fig:grad_vs_X}}
+\begin{lstlisting}
+x = linspace(-3,3, 300);
+y1 = 2*cos(2*pi*x)-1;
+y2 = 1*cos(2*pi*x)-1;
+y3 = 0.5*cos(2*pi*x)-1;
+
+figure('visible','off')
+plot(x,y1)
+xticks(-10:1:10)
+xlabel("\chi")
+yticks(-10:1:10)
+yl = ylabel("$\frac{d\chi}{dt}$",'Interpreter','latex');
+set(yl,'rotation',0,'VerticalAlignment','bottom')
+axis([-3, 3, -4, 4])
+line([-10, 10], [0, 0], 'color', 'black')
+line([-10, 10], [-1, -1], 'color', [0.7, 0.7, 0.7])
+line([1/6, 1/6], [10, -10], 'color', [0.25, 0.25, 0.25], 'LineStyle', '--')
+line([-1/6, -1/6], [10, 0], 'color', [0.5, 0.5, 0.5], 'LineStyle', '--')
+line([5/6, 5/6], [0, -10], 'color', [0.5, 0.5, 0.5], 'LineStyle', '--')
+grid on
+daspect([1 2 1])
+annotation('arrow',[0.495 0.54],[0.65 0.65])
+annotation('arrow',[0.625 0.54],[0.2 0.2])
+print("large a", '-dpng','-r600');
+
+figure('visible','off')
+plot(x,y2)
+xticks(-10:1:10)
+xlabel("\chi")
+yticks(-10:1:10)
+yl = ylabel("$\frac{d\chi}{dt}$",'Interpreter','latex');
+set(yl,'rotation',0,'VerticalAlignment','bottom')
+axis([-3, 3, -4, 4])
+line([-10, 10], [0, 0], 'color', 'black')
+line([-10, 10], [-1, -1], 'color', [0.7, 0.7, 0.7])
+line([0, 0], [10, -10], 'color', [0.25, 0.25, 0.25], 'LineStyle', '--')
+line([1, 1], [0, -10], 'color', [0.5, 0.5, 0.5], 'LineStyle', '--')
+grid on
+daspect([1 2 1])
+annotation('arrow',[0.647 0.5175],[0.3 0.3])
+print("mid a", '-dpng','-r600');
+
+figure('visible','off')
+plot(x,y3)
+xticks(-10:1:10)
+xlabel("\chi")
+yticks(-10:1:10)
+yl = ylabel("$\frac{d\chi}{dt}$",'Interpreter','latex');
+set(yl,'rotation',0,'VerticalAlignment','bottom')
+axis([-3, 3, -4, 4])
+line([-10, 10], [0, 0], 'color', 'black')
+line([-10, 10], [-1, -1], 'color', [0.7, 0.7, 0.7])
+grid on
+daspect([1 2 1])
+annotation('arrow',[0.7765 0.2585],[0.3 0.3])
+print("small a", '-dpng','-r600');
+\end{lstlisting}
+
+\end{document}

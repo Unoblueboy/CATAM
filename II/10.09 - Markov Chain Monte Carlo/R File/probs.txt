@@ -1,0 +1,14 @@
+Probability mean score of Arsnal is greater than average is: 0.996500349965003
+Probability mean score of Asten Villa is greater than average is: 0.23977602239776
+Probability mean score of Blackborn Rovers is greater than average is: 0.170882911708829
+Probability mean score of Boltin Wandrers is greater than average is: 0.253874612538746
+Probability mean score of Charlston Athletic is greater than average is: 0.0238976102389761
+Probability mean score of Chelsea Buns is greater than average is: 0.956004399560044
+Probability mean score of Evraton is greater than average is: 0.214078592140786
+Probability mean score of Fullem is greater than average is: 0.0475952404759524
+Probability mean score of Livurpule is greater than average is: 0.895810418958104
+Probability mean score of Manchester Ununited is greater than average is: 0.998200179982002
+Probability mean score of Middlesbro is greater than average is: 0.0833916608339166
+Probability mean score of Newcassel Divided is greater than average is: 0.811018898110189
+Probability mean score of Slothampton is greater than average is: 0.0854914508549145
+Probability mean score of Tottenham Coldspur is greater than average is: 0.198980101989801
